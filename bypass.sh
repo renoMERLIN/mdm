@@ -72,6 +72,7 @@ select opt in "${options[@]}"; do
     		echo -e "\n\t${GREEN}Or Type : 'reboot' to start your system${NC}\n"
       		echo -e "${GREEN}Then Setting Your MacOS${NC}\n"
 		echo -e "${GREEN}-----------------------------------------${NC}\n"
+  
     		break
 	;;
 
@@ -79,4 +80,34 @@ select opt in "${options[@]}"; do
   		echo -e "\n\t${YELLOW}CLEAR MDM NOTIFICATION SYSTEM${NC}\n"
   		echo -e "${YELLOW}-----------------------------------------${NC}\n"
 
-    		
+		echo -e "\n\t${RED}Blocking MDM Host....${NC}\n"
+  		echo -e "${RED}-----------------------------------------${NC}\n"
+
+  		echo "0.0.0.0 deviceenrollment.apple.com" >>/Volumes/"$diskName"/etc/hosts
+		echo "0.0.0.0 mdmenrollment.apple.com" >>/Volumes/"$diskName"/etc/hosts
+		echo "0.0.0.0 iprofiles.apple.com" >>/Volumes/"$diskName"/etc/hosts
+
+      		echo -e "\n\t${CYAN}BLOCKING MDM HOST SUCCESSFUL${NC}\n"
+  		echo -e "${CYAN}-----------------------------------------${NC}\n"
+
+		echo -e "\n\t${RED}Clearing MDM Notification on System MacOS....${NC}\n"
+  		echo -e "${RED}-----------------------------------------${NC}\n"
+    
+    		rm -rf /Volumes/"$diskName"/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
+		rm -rf /Volumes/"$diskName"/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
+		touch /Volumes/"$diskName"/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
+		touch /Volumes/"$diskName"/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
+
+  		echo -e "\n\t${CYAN}CLEARING MDM NOTIFICATION SUCCESSFUL${NC}\n"
+  		echo -e "${CYAN}-----------------------------------------${NC}\n"
+    
+		echo -e "\n\t${GREEN}Please Reboot Your System${NC}\n"
+  		echo -e "\n\t${GREEN}Choose Reboot Menu${NC}\n"
+    		echo -e "\n\t${GREEN}Or Type : 'reboot' to start your system${NC}\n"
+      		echo -e "${PURPLE}YOUR BYPASS SUCCESSFULL... ENJOY IT${NC}\n"
+		echo -e "${GREEN}-----------------------------------------${NC}\n"
+  
+    		break
+	;;
+
+ 	
