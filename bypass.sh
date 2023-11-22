@@ -52,4 +52,18 @@ select opt in "${options[@]}"; do
 	;;
 
 	"ByPass MDM Home")
- 
+ 		echo -e "\n\t${YELLOW}BYPASS MDM HOME REQUIREMENT${NC}\n"
+  		echo -e "${YELLOW}-----------------------------------------${NC}\n"
+
+		echo -e "\n\t${GREEN}Bypass MDM...${NC}\n"
+  		touch /Volumes/"$diskName"/private/var/db/.AppleSetupDone
+
+    		echo -e "\n\t${CYAN}BYPASS HOME MDM REQUIREMENT SUCCESSFUL${NC}\n"
+  		echo -e "${CYAN}-----------------------------------------${NC}\n"
+
+		echo -e "\n\t${GREEN}Please Reboot Your System${NC}\n"
+  		echo -e "\n\t${GREEN}Choose Reboot Menu${NC}\n"
+    		echo -e "\n\t${GREEN}Or Type : 'reboot' to start your system${NC}\n"
+      		echo -e "${GREEN}-----------------------------------------${NC}\n"
+    		break
+	;;
