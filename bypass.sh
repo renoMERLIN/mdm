@@ -24,10 +24,13 @@ select opt in "${options[@]}"; do
     
   		echo -e "${BLUE}Enter SYSTEM VOLUME Disk Name (Default: Macintosh HD)${NC}"
 		read -rp "Type Your System Volume Disk Name: " diskName
+  		echo -e "\n\t${BLUE}Initiating Your SYSTEM VOLUME Disk...${NC}\n"
 		diskName="${diskName:=Macintosh HD}"
 
+		echo -e "\n\t${GREEN}Initiating Your DATA Disk...${NC}\n"
 		dataName=""$diskName" - Data"
-  
+
+  		echo -e "${CYAN}-----------------------------------------${NC}\n"
   		echo -e "\n\t${CYAN}Initiating SUCCESSFUL${NC}\n"
   		echo -e "${CYAN}-----------------------------------------${NC}\n"
 
@@ -45,4 +48,8 @@ select opt in "${options[@]}"; do
       		echo -e "\n\t${GREEN}YOUR PASSWORD ACCOUNT : 1234${NC}\n"
   		echo -e "${CYAN}-----------------------------------------${NC}\n"
     
-  		echo -e "\n\t${GREEN}Initiating Your Data Disk${NC}\n"
+  		break
+	;;
+
+	"ByPass MDM Home")
+ 
