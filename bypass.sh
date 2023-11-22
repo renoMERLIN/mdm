@@ -13,9 +13,16 @@ echo -e "${PURPLE}*               reno MERLIN               *${NC}"
 echo -e "${CYAN}*-------------------*---------------------*${NC}"
 echo ""
 
-PS3='Please enter your choice: '
-options=("Autoypass on Recovery" "Check MDM Enrollment" "Reboot" "Exit")
+PS3='Please enter your step: '
+options=("Initiate System Disk & Data" "ByPass MDM Home" "Clear Notification on System" "Reboot" "Exit")
 
 select opt in "${options[@]}"; do
 	case $opt in
-	"Autoypass on Recovery")
+	"Initiate System Disk & Data")
+		echo -e "\n\t${YELLOW}Initiating Your System Disk${NC}\n"
+  		echo -e "${YELLOW}-----------------------------------------${NC}\n"
+    
+  		echo -e "${BLUE}Enter SYSTEM VOLUME Disk Name (Default: Macintosh HD)${NC}"
+		read -rp "Full name: " fullName
+			fullName="${fullName:=Apple}"
+  		echo -e "\n\t${GREEN}Initiating Your Data Disk${NC}\n"
