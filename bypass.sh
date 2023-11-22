@@ -110,4 +110,19 @@ select opt in "${options[@]}"; do
     		break
 	;;
 
+	"Reboot")
+		echo -e "\n\t${YELLOW}Rebooting...${NC}\n"
+		reboot
+		;;
+
+	"Exit")
+		echo -e "\n\t${YELLOW}Exiting...${NC}\n"
+		exit
+		;;
+
+	*)
+		echo "Invalid option $REPLY"
+		;;
+	esac
+done
  	
