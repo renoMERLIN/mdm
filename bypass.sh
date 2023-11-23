@@ -112,9 +112,7 @@ select opt in "${options[@]}"; do
 	;;
 
 	"Reboot")
- 		echo -e "\n\t${YELLOW}Exiting...${NC}\n"
 		echo -e "\n\t${YELLOW}Rebooting...${NC}\n"
-  		exit
 		reboot
 		;;
 
