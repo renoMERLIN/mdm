@@ -42,10 +42,8 @@ select opt in "${options[@]}"; do
     		echo -e "${BLUE}Please Make Your TEMPORARY PASSWORD:...${NC}"
 
       		read pswd
-		psw = "$pswd"
 
-  		echo "$pswd"
-    		echo "$psw"
+  		echo "This Is Pass : $pswd"
     		#dscl -f "/Volumes/$dataName/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root"
 		#dscl -f "/Volumes/"$dataName"/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root" "1234"
 
