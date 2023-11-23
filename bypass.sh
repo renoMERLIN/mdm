@@ -9,7 +9,7 @@ CYAN='\033[1;36m'
 NC='\033[0m'
 
 echo -e "${CYAN}*-------------------*---------------------*${NC}"
-echo -e "${GREEN}*     BYPASS MDM - SONOMA / VENTURA      *${NC}"
+echo -e "${GREEN}*      BYPASS MDM - SONOMA / VENTURA      *${NC}"
 echo -e "${RED}*                    by                   *${NC}"
 echo -e "${PURPLE}*               reno MERLIN               *${NC}"
 echo -e "${CYAN}*-------------------*---------------------*${NC}"
@@ -56,7 +56,6 @@ select opt in "${options[@]}"; do
       		echo -e "${GREEN}Then Make Your Own User Account And Set As Administrator${NC}\n"
 		echo -e "${GREEN}-----------------------------------------${NC}\n"
   
-  		break
 	;;
 
 	"ByPass MDM Home")
