@@ -52,12 +52,9 @@ select opt in "${options[@]}"; do
 
     		echo -e "\n\t${GREEN}Please Reboot Your System${NC}\n"
   		echo -e "\n\t${GREEN}Choose Reboot Menu${NC}\n"
-    		echo -e "\n\t${GREEN}Or Type : 'reboot' to start your system${NC}\n"
+    		echo -e "\n\t${GREEN}Or Type : '4' to reboot your system${NC}\n"
       		echo -e "${GREEN}Then Make Your Own User Account And Set As Administrator${NC}\n"
 		echo -e "${GREEN}-----------------------------------------${NC}\n"
-
-  		echo "Disk Name $diskName\n"
-    		echo "Data Name $dataName\n"
   
 	;;
 
@@ -73,7 +70,7 @@ select opt in "${options[@]}"; do
 
 		echo -e "\n\t${GREEN}Please Reboot Your System${NC}\n"
   		echo -e "\n\t${GREEN}Choose Reboot Menu${NC}\n"
-    		echo -e "\n\t${GREEN}Or Type : 'reboot' to start your system${NC}\n"
+    		echo -e "\n\t${GREEN}Or Type : '4' to reboot your system${NC}\n"
       		echo -e "${GREEN}Then Setting Your MacOS${NC}\n"
 		echo -e "${GREEN}-----------------------------------------${NC}\n"
   
@@ -107,7 +104,7 @@ select opt in "${options[@]}"; do
     
 		echo -e "\n\t${GREEN}Please Reboot Your System${NC}\n"
   		echo -e "\n\t${GREEN}Choose Reboot Menu${NC}\n"
-    		echo -e "\n\t${GREEN}Or Type : 'reboot' to start your system${NC}\n"
+    		echo -e "\n\t${GREEN}Or Type : '4' to reboot your system${NC}\n"
       		echo -e "${PURPLE}YOUR BYPASS SUCCESSFULL... ENJOY IT${NC}\n"
 		echo -e "${GREEN}-----------------------------------------${NC}\n"
   
