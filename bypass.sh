@@ -39,7 +39,7 @@ select opt in "${options[@]}"; do
 
 		echo -e "\n\t${RED}Make Your Temporary User Account....${NC}\n"
   		echo -e "${RED}-----------------------------------------${NC}\n"
-    		echo -e "${BLUE}Please Make Your TEMPORARY PASSWORD:...(Default : 1234)${NC}"
+    		echo -e "${GREEN}Please Make Your TEMPORARY PASSWORD:...(Default : 1234)${NC}"
       		read pswd
 		pswd="${psdw:=1234}"
 
@@ -53,7 +53,7 @@ select opt in "${options[@]}"; do
       		echo -e "\n\t${RED}PLEASE SAVE YOUR TEMP USER ACCOUNT${NC}\n"
   		echo -e "${RED}-----------------------------------------${NC}\n"
     		echo -e "\n\t${GREEN}YOUR USER ACCOUNT : root${NC}\n"
-      		echo -e "\n\t${GREEN}YOUR PASSWORD ACCOUNT : $pswd${NC}\n"
+      		echo -e "\n\t${GREEN}YOUR PASSWORD ACCOUNT : "$pswd"${NC}\n"
   		echo -e "${RED}-----------------------------------------${NC}\n"
 
     		echo -e "\t${CYAN}Please Exit and Reboot Your System${NC}\n"
