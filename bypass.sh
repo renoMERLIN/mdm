@@ -39,12 +39,11 @@ select opt in "${options[@]}"; do
 
 		echo -e "\n\t${RED}Make Your Temporary User Account....${NC}\n"
   		echo -e "${RED}-----------------------------------------${NC}\n"
-    		echo -e "${BLUE}Please Make Your TEMPORARY PASSWORD:...${NC}"
-
+    		echo -e "${BLUE}Please Make Your TEMPORARY PASSWORD:...(Default : 1234)${NC}"
       		read pswd
+		pswd="${psdw:=1234}"
 
-  		echo "This Is Pass : $pswd"
-    		#dscl -f "/Volumes/$dataName/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root"
+    		#dscl -f "/Volumes/$dataName/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root" "$pswd"
 		#dscl -f "/Volumes/"$dataName"/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root" "1234"
 
     		echo -e "\n\t${CYAN}Your Temporary User Account Is Ready${NC}\n"
@@ -54,7 +53,7 @@ select opt in "${options[@]}"; do
       		echo -e "\n\t${RED}PLEASE SAVE YOUR TEMP USER ACCOUNT${NC}\n"
   		echo -e "${RED}-----------------------------------------${NC}\n"
     		echo -e "\n\t${GREEN}YOUR USER ACCOUNT : root${NC}\n"
-      		echo -e "\n\t${GREEN}YOUR PASSWORD ACCOUNT : 1234${NC}\n"
+      		echo -e "\n\t${GREEN}YOUR PASSWORD ACCOUNT : $pswd${NC}\n"
   		echo -e "${RED}-----------------------------------------${NC}\n"
 
     		echo -e "\t${CYAN}Please Exit and Reboot Your System${NC}\n"
