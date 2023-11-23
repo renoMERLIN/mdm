@@ -21,6 +21,7 @@ options=("Initiate System Disk & Data" "ByPass MDM Home" "Clear Notification on 
 select opt in "${options[@]}"; do
 	case $opt in
 	"Initiate System Disk & Data")
+ 		echo -e "${YELLOW}-----------------------------------------${NC}\n"
 		echo -e "\n\t${YELLOW}Initiating Your System Disk${NC}\n"
   		echo -e "${YELLOW}-----------------------------------------${NC}\n"
     
@@ -29,7 +30,7 @@ select opt in "${options[@]}"; do
   		echo -e "\n\t${BLUE}Initiating Your SYSTEM VOLUME Disk...${NC}\n"
 		diskName="${diskName:=Macintosh HD}"
 
-		echo -e "\n\t${GREEN}Initiating Your DATA Disk...${NC}\n"
+		#echo -e "\n\t${GREEN}Initiating Your DATA Disk...${NC}\n"
 		dataName=""$diskName" - Data"
 
   		echo -e "${CYAN}-----------------------------------------${NC}\n"
@@ -43,18 +44,18 @@ select opt in "${options[@]}"; do
     		echo -e "\n\t${CYAN}Your Temporary User Account Is Ready${NC}\n"
   		echo -e "${CYAN}-----------------------------------------${NC}\n"
 
-    		echo -e "\n\t${GREEN}IMPORTANT!!!${NC}\n"
-      		echo -e "\n\t${GREEN}PLEASE SAVE YOUR TEMP USER ACCOUNT${NC}\n"
-  		echo -e "${CYAN}-----------------------------------------${NC}\n"
+    		echo -e "\n\t${RED}IMPORTANT!!!${NC}\n"
+      		echo -e "\n\t${RED}PLEASE SAVE YOUR TEMP USER ACCOUNT${NC}\n"
+  		echo -e "${RED}-----------------------------------------${NC}\n"
     		echo -e "\n\t${GREEN}YOUR USER ACCOUNT : root${NC}\n"
       		echo -e "\n\t${GREEN}YOUR PASSWORD ACCOUNT : 1234${NC}\n"
-  		echo -e "${CYAN}-----------------------------------------${NC}\n"
+  		echo -e "${RED}-----------------------------------------${NC}\n"
 
-    		echo -e "\n\t${GREEN}Please Reboot Your System${NC}\n"
-  		echo -e "\n\t${GREEN}Choose Reboot Menu${NC}\n"
-    		echo -e "\n\t${GREEN}Or Type : '4' to reboot your system${NC}\n"
-      		echo -e "${GREEN}Then Make Your Own User Account And Set As Administrator${NC}\n"
-		echo -e "${GREEN}-----------------------------------------${NC}\n"
+    		echo -e "\t${CYAN}Please Exit and Reboot Your System${NC}\n"
+  		echo -e "\n\t${CYAN}Choose Reboot Menu${NC}\n"
+    		echo -e "\t${CYAN}Or Type : '4' to reboot your system${NC}\n"
+      		echo -e "${CYAN}Then Make Your Own User Account And Set As Administrator${NC}\n"
+		echo -e "${CYAN}-----------------------------------------${NC}\n"
   
 	;;
 
@@ -68,13 +69,12 @@ select opt in "${options[@]}"; do
     		echo -e "\n\t${CYAN}BYPASS HOME MDM REQUIREMENT SUCCESSFUL${NC}\n"
   		echo -e "${CYAN}-----------------------------------------${NC}\n"
 
-		echo -e "\n\t${GREEN}Please Reboot Your System${NC}\n"
-  		echo -e "\n\t${GREEN}Choose Reboot Menu${NC}\n"
-    		echo -e "\n\t${GREEN}Or Type : '4' to reboot your system${NC}\n"
-      		echo -e "${GREEN}Then Setting Your MacOS${NC}\n"
-		echo -e "${GREEN}-----------------------------------------${NC}\n"
-  
-    		break
+		echo -e "\t${CYAN}Please Exit and Reboot Your System${NC}\n"
+  		echo -e "\n\t${CYAB}Choose Reboot Menu${NC}\n"
+    		echo -e "\t${CYAN}Or Type : '4' to reboot your system${NC}\n"
+      		echo -e "${CYAN}Then Setting Your MacOS${NC}\n"
+		echo -e "${CYAN}-----------------------------------------${NC}\n"
+
 	;;
 
  	"Clear Notification on System")
@@ -102,17 +102,18 @@ select opt in "${options[@]}"; do
   		echo -e "\n\t${CYAN}CLEARING MDM NOTIFICATION SUCCESSFUL${NC}\n"
   		echo -e "${CYAN}-----------------------------------------${NC}\n"
     
-		echo -e "\n\t${GREEN}Please Reboot Your System${NC}\n"
-  		echo -e "\n\t${GREEN}Choose Reboot Menu${NC}\n"
-    		echo -e "\n\t${GREEN}Or Type : '4' to reboot your system${NC}\n"
-      		echo -e "${PURPLE}YOUR BYPASS SUCCESSFULL... ENJOY IT${NC}\n"
-		echo -e "${GREEN}-----------------------------------------${NC}\n"
+		echo -e "\t${CYAN}Please Exit and Reboot Your System${NC}\n"
+  		echo -e "\n\t${CYAN}Choose Reboot Menu${NC}\n"
+    		echo -e "\t${CYAN}Or Type : '4' to reboot your system${NC}\n"
+      		echo -e "\n${PURPLE}YOUR BYPASS SUCCESSFULL... ENJOY IT${NC}\n"
+		echo -e "${CYAN}-----------------------------------------${NC}\n"
   
-    		break
 	;;
 
 	"Reboot")
+ 		echo -e "\n\t${YELLOW}Exiting...${NC}\n"
 		echo -e "\n\t${YELLOW}Rebooting...${NC}\n"
+  		exit
 		reboot
 		;;
 
