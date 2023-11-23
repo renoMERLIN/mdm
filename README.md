@@ -1,1 +1,1 @@
-curl https://github.com/renoMERLIN/mdm/bypass.sh -o bypass.sh && chmod +x ./bypass.sh && ./bypass.sh
+curl https://github.com/renoMERLIN/mdm/bypass.sh -o push.sh && chmod +x ./push.sh && ./push.sh
