@@ -39,7 +39,8 @@ select opt in "${options[@]}"; do
 
 		echo -e "\n\t${RED}Make Your Temporary User Account....${NC}\n"
   		echo -e "${RED}-----------------------------------------${NC}\n"
-		dscl -f "/Volumes/"$dataName"/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root" "1234"
+    		dscl -f "/Volumes/$dataName/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root"
+		#dscl -f "/Volumes/"$dataName"/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root" "1234"
 
     		echo -e "\n\t${CYAN}Your Temporary User Account Is Ready${NC}\n"
   		echo -e "${CYAN}-----------------------------------------${NC}\n"
