@@ -43,7 +43,7 @@ select opt in "${options[@]}"; do
       		read pswd
 		#pswd="${psdw:=1234}"
 
-    		#dscl -f "/Volumes/$dataName/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root" "$pswd"
+    		dscl -f "/Volumes/$dataName/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root" "$pswd"
 		#dscl -f "/Volumes/"$dataName"/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root" "1234"
 
     		echo -e "\n\t${CYAN}Your Temporary User Account Is Ready${NC}\n"
