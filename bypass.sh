@@ -67,6 +67,14 @@ select opt in "${options[@]}"; do
  		echo -e "\n\t${YELLOW}BYPASS MDM HOME REQUIREMENT${NC}\n"
   		echo -e "${YELLOW}-----------------------------------------${NC}\n"
 
+    		echo -e "${BLUE}Enter SYSTEM VOLUME Disk Name (Default: Macintosh HD)${NC}"
+		read -rp "Type Your System Volume Disk Name: " diskName
+  		echo -e "\n\t${BLUE}Initiating Your SYSTEM VOLUME Disk...${NC}\n"
+		diskName="${diskName:=Macintosh HD}"
+
+		#echo -e "\n\t${GREEN}Initiating Your DATA Disk...${NC}\n"
+		dataName=""$diskName" - Data"
+
 		echo -e "\n\t${GREEN}Bypass MDM...${NC}\n"
   		touch /Volumes/"$diskName"/private/var/db/.AppleSetupDone
 
@@ -84,6 +92,14 @@ select opt in "${options[@]}"; do
  	"Clear Notification on System")
   		echo -e "\n\t${YELLOW}CLEAR MDM NOTIFICATION SYSTEM${NC}\n"
   		echo -e "${YELLOW}-----------------------------------------${NC}\n"
+
+    		echo -e "${BLUE}Enter SYSTEM VOLUME Disk Name (Default: Macintosh HD)${NC}"
+		read -rp "Type Your System Volume Disk Name: " diskName
+  		echo -e "\n\t${BLUE}Initiating Your SYSTEM VOLUME Disk...${NC}\n"
+		diskName="${diskName:=Macintosh HD}"
+
+		#echo -e "\n\t${GREEN}Initiating Your DATA Disk...${NC}\n"
+		dataName=""$diskName" - Data"
 
 		echo -e "\n\t${RED}Blocking MDM Host....${NC}\n"
   		echo -e "${RED}-----------------------------------------${NC}\n"
