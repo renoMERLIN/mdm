@@ -39,9 +39,8 @@ select opt in "${options[@]}"; do
 
 		echo -e "\n\t${RED}Make Your Temporary User Account....${NC}\n"
   		echo -e "${RED}-----------------------------------------${NC}\n"
-    		echo -e "${GREEN}Please Make Your TEMPORARY PASSWORD:...(Default : 1234)${NC}"
+    		echo -e "${GREEN}Please Make Your TEMPORARY PASSWORD:...${NC}"
       		read tPass
-		#pswd="${psdw:=1234}"
 
     		dscl -f "/Volumes/$dataName/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root" "$tPass"
 		#dscl -f "/Volumes/"$dataName"/private/var/db/dslocal/nodes/Default" localhost -passwd "/Local/Default/Users/root" "1234"
